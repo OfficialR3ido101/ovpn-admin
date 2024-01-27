@@ -4,7 +4,7 @@ set -ex
 EASY_RSA_LOC="/etc/openvpn/easyrsa"
 SERVER_CERT="${EASY_RSA_LOC}/pki/issued/server.crt"
 
-OVPN_SRV_NET=${OVPN_SERVER_NET:-172.16.100.0}
+OVPN_SRV_NET=${OVPN_SERVER_NET:-10.6.9.0}
 OVPN_SRV_MASK=${OVPN_SERVER_MASK:-255.255.255.0}
 
 

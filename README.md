@@ -75,7 +75,7 @@ You can also download and use prebuilt binaries from the [releases](https://gith
 * to enable additional password authentication provide `--auth` and `--auth.db="/etc/easyrsa/pki/users.db`" flags and install [openvpn-user](https://github.com/pashcovich/openvpn-user/releases/latest). This tool should be available in your `$PATH` and its binary should be executable (`+x`).
 * master-replica synchronization does not work with `--storage.backend=kubernetes.secrets` - **WIP**
 * additional password authentication does not work with `--storage.backend=kubernetes.secrets` -  **WIP**
-* if you use `--ccd` and `--ccd.path="/etc/openvpn/ccd"` abd plan to use static address setup for users do not forget to provide `--ovpn.network="172.16.100.0/24"` with valid openvpn-server network 
+* if you use `--ccd` and `--ccd.path="/etc/openvpn/ccd"` abd plan to use static address setup for users do not forget to provide `--ovpn.network="10.6.9.0/24"` with valid openvpn-server network 
 * tested only with Openvpn-server versions 2.4 and 2.5 with only tls-auth mode
 * not tested with EasyRsa version > 3.0.8
 * status of users connections update every 28 second(*no need to ask why =)*)
@@ -115,7 +115,7 @@ Flags:
   --master.sync-token=TOKEN    master host data sync security token
   (or OVPN_MASTER_TOKEN)
 
-  --ovpn.network="172.16.100.0/24"  
+  --ovpn.network="10.6.9.0/24"  
   (or OVPN_NETWORK)           NETWORK/MASK_PREFIX for OpenVPN server
 
   --ovpn.server=HOST:PORT:PROTOCOL ...  
